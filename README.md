@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/31715947/README.md)
 # Treasure Valley Mental Health — website
 
 Static HTML site, no build step. Hosts on GitHub Pages as-is.
