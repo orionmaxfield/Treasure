@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow"><!-- STAGING ONLY: delete this line at domain cutover -->
   <title>Contact | Treasure Valley Mental Health, Boise</title>
   <meta name="description" content="Request an appointment with Treasure Valley Mental Health in Boise, Idaho. Call 208-479-1116 or use our short contact form.">
-  <link rel="canonical" href="https://www.treasurevalleymentalhealth.com/contact.html">
+  <link rel="canonical" href="https://www.treasurevalleymentalhealth.com/contact/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Request an Appointment | Treasure Valley Mental Health, Boise">
+  <meta property="og:description" content="Request an appointment with Treasure Valley Mental Health in Boise, Idaho. Call 208-479-1116 or use our short contact form.">
+  <meta property="og:url" content="https://www.treasurevalleymentalhealth.com/contact/">
+  <meta property="og:image" content="https://www.treasurevalleymentalhealth.com/images/team.jpg">
+  <meta property="og:site_name" content="Treasure Valley Mental Health">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
@@ -17,14 +25,14 @@
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html">Treasure Valley Mental Health<span>Counseling in Boise, Idaho</span></a>
+      <a class="brand" href="../">Treasure Valley Mental Health<span>Counseling in Boise, Idaho</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
       <nav class="nav" id="nav" aria-label="Main">
-        <a href="services.html">Services</a>
-        <a href="team.html">Our therapists</a>
-        <a href="fees.html">Fees &amp; insurance</a>
+        <a href="../services/">Services</a>
+        <a href="../team/">Our therapists</a>
+        <a href="../fees/">Fees &amp; insurance</a>
         <a href="tel:2084791116">208-479-1116</a>
-        <a class="btn" href="contact.html">Request an appointment</a>
+        <a class="btn" href="../contact/">Request an appointment</a>
       </nav>
     </div>
   </header>
@@ -80,14 +88,14 @@
               </select>
             </div>
             <div class="field">
-              <label for="message">Anything you'd like us to know <span class="hint">(optional)</span></label>
-              <textarea id="message" name="message" placeholder="Only share what feels comfortable."></textarea>
+              <label for="message">What are you hoping to get help with? <span class="hint">(optional, a few words is plenty)</span></label>
+              <textarea id="message" name="message" placeholder="For example: anxiety, my teenager, our marriage. Please keep it general and leave out health history."></textarea>
             </div>
             <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
             <input type="hidden" name="_subject" value="New appointment request from the website">
             <button class="btn" type="submit">Send my request</button>
             <p class="form-error" role="alert">Something went wrong sending your request. Please try again, or call 208-479-1116.</p>
-            <p class="form-note">This form is for scheduling only and isn't monitored around the clock. If you need help right now, call or text 988.</p>
+            <p class="form-note">This form is for scheduling only and isn't monitored around the clock. It isn't a secure medical record, so please keep details general. If you need help right now, call or text 988.</p>
           </form>
           <div class="form-success" tabindex="-1">
             <strong>Thank you. We got your request.</strong><br>
@@ -126,7 +134,8 @@
 <footer class="site-footer">
     <div class="wrap">
       <div>
-        <img class="logo" src="https://static.wixstatic.com/media/5716a9_aeaae3ed582b443ab50265ecabcd0660~mv2.png/v1/crop/x_0,y_37,w_963,h_186/fill/w_635,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5716a9_aeaae3ed582b443ab50265ecabcd0660~mv2.png" alt="Treasure Valley Mental Health">
+        <img class="logo" src="../images/logo.png" data-fallback="https://static.wixstatic.com/media/5716a9_aeaae3ed582b443ab50265ecabcd0660~mv2.png/v1/crop/x_0,y_37,w_963,h_186/fill/w_635,h_122,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/5716a9_aeaae3ed582b443ab50265ecabcd0660~mv2.png" data-optional alt="Treasure Valley Mental Health">
+        <p class="footer-brand">Treasure Valley Mental Health</p>
         <address>
           6126 W. State Street, Suite 402<br>
           Boise, Idaho 83703<br>
@@ -136,11 +145,12 @@
       </div>
       <div>
         <ul class="footer-links">
-          <li><a href="services.html">Services</a></li>
-          <li><a href="team.html">Our therapists</a></li>
-          <li><a href="fees.html">Fees &amp; insurance</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="../services/">Services</a></li>
+          <li><a href="../team/">Our therapists</a></li>
+          <li><a href="../fees/">Fees &amp; insurance</a></li>
+          <li><a href="../faq/">FAQ</a></li>
+          <li><a href="../contact/">Contact</a></li>
+          <li><a href="../privacy/">Privacy</a></li>
         </ul>
       </div>
       <div>
@@ -156,6 +166,6 @@
     </div>
   </footer>
 
-  <script src="site.js"></script>
+  <script src="../site.js"></script>
 </body>
 </html>

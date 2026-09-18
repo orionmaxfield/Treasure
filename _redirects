@@ -1,0 +1,18 @@
+# Redirects from the old Wix URLs to the new site. Used by Cloudflare Pages or Netlify.
+# GitHub Pages ignores this file; put Cloudflare in front of the domain to make these work.
+/team-3               /team/                          301
+/about-5-4            /joe-arzola/                    301
+/about-5-1            /leann-vaterlaus/               301
+/about-5-2            /charlene-holloway/             301
+/about-5-3            /team/                          301
+/about-5              /team/                          301
+/individual-therapy   /services/                      301
+/couples-therapy      /couples-therapy-boise/         301
+/family-therapy-1     /services/                      301
+/faq-s                /faq/                           301
+/insurance            /fees/                          301
+/services-1           /fees/                          301
+/specialized-learning /cbrs-boise/                    301
+/book-online          /contact/                       301
+/reading-materials    /                               301
+/*.html               /:splat/                        301
