@@ -228,6 +228,22 @@ a.person:hover h3, a.person:focus-visible h3 { text-decoration: underline; text-
 .faq[open] summary::after { content: "\2013"; }
 .faq p { margin: 10px 0 0; }
 
+/* Specialty pages */
+.page-head .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.checks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 32px; }
+.checks li { position: relative; padding-left: 28px; }
+.checks li::before { content: ""; position: absolute; left: 0; top: 6px; width: 16px; height: 16px; border-radius: 50%; background: var(--sage); }
+.checks li::after { content: ""; position: absolute; left: 5px; top: 10px; width: 6px; height: 3px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
+a.row { display: block; color: inherit; text-decoration: none; }
+a.row:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
+a.row p { color: var(--ink-soft); }
+.steps { padding-left: 1.2em; margin: 0 0 20px; }
+.steps li { margin-bottom: 10px; }
+.link-strip { line-height: 2; }
+.link-strip a { margin-right: 6px; white-space: nowrap; }
+.tags li a { color: inherit; text-decoration: none; font-weight: 600; }
+.tags li:has(a):hover { border-color: var(--ink); }
+
 /* Location */
 .location { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
 .location iframe { width: 100%; height: 320px; border: 0; border-radius: var(--radius); }
@@ -279,6 +295,7 @@ a.person:hover h3, a.person:focus-visible h3 { text-decoration: underline; text-
   .team-grid { grid-template-columns: 1fr; }
   .bio img, .bio .photo-pending { max-width: 240px; }
   .profile-body { grid-template-columns: 1fr; }
+  .checks { grid-template-columns: 1fr; }
   .profile-side { position: static; }
   .bio .glance { grid-template-columns: 1fr; gap: 2px 0; }
   .bio .glance dd { margin-bottom: 10px; }

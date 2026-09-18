@@ -7,6 +7,7 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
 - `services.html` — what we treat
 - `team.html` — therapist bios
 - `joe-arzola.html`, `jennifer-arzola.html`, `charlene-holloway.html`, `leann-vaterlaus.html`, `katie-aston.html`, `kaisa.html` — one page per clinician (these are the links to put on Psychology Today and social profiles)
+- `anxiety-therapy-boise.html`, `depression-therapy-boise.html`, `trauma-therapy-boise.html`, `couples-therapy-boise.html`, `child-therapy-boise.html`, `grief-counseling-boise.html`, `anger-management-boise.html` — one page per specialty
 - `sitemap.xml`, `robots.txt` — for search engines; add a new page to the sitemap when you create one
 - `fees.html` — insurance, sliding scale, reduced-rate sessions, Good Faith Estimate line
 - `contact.html` — form, map, crisis resources
@@ -37,7 +38,6 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
 - **Colors:** the `:root` variables at the top of `styles.css`.
 
 ## Phase two ideas (not built)
-- One page per specialty (anxiety, depression, trauma, couples) for search.
 - Google Ads landing page: copy `contact.html`, strip the nav, keep the form.
 - Real office and team photos.
 - Spanish-language page if a bilingual clinician is confirmed.
