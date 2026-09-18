@@ -156,6 +156,8 @@ img { max-width: 100%; height: auto; display: block; }
 .row p:last-child { margin-bottom: 0; }
 
 /* Tag list for concerns */
+.callout { background: var(--sage-tint); border-left: 4px solid var(--sage); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 36px; }
+.prose .tags { margin: 8px 0 18px; padding-left: 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
 .tags li {
   background: #fff; border: 1px solid var(--line); border-radius: 999px;
@@ -173,6 +175,36 @@ img { max-width: 100%; height: auto; display: block; }
 .bio img { border-radius: var(--radius); aspect-ratio: 3 / 4; object-fit: cover; background: var(--sage-tint); }
 .bio .role { color: var(--ink-soft); margin-bottom: 16px; }
 .bio h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; margin: 20px 0 6px; }
+.bio { scroll-margin-top: 96px; }
+.bio .tagline { font-family: var(--serif); font-size: 1.2rem; line-height: 1.45; color: var(--ink); margin-bottom: 18px; }
+.bio .glance { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin: 20px 0 0; padding: 18px 20px; background: var(--mist); border-radius: var(--radius); }
+.bio .glance dt { font-weight: 700; font-size: 0.95rem; }
+.bio .glance dd { margin: 0; }
+.bio .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 22px; }
+.bio .actions .ext { font-weight: 600; }
+.team-jump { margin-top: 20px; font-size: 0.95rem; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+.team-jump span { color: var(--ink-soft); }
+.team-jump a { font-weight: 600; }
+
+/* Team cards on the home page link to each bio */
+a.person { display: block; color: inherit; text-decoration: none; }
+a.person img, a.person .photo-pending { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+a.person:hover img, a.person:hover .photo-pending, a.person:focus-visible img, a.person:focus-visible .photo-pending {
+  transform: translateY(-3px); box-shadow: 0 8px 20px rgba(33, 59, 63, 0.14);
+}
+a.person:hover h3, a.person:focus-visible h3 { text-decoration: underline; text-underline-offset: 3px; }
+.person .more { display: inline-block; font-size: 0.9rem; font-weight: 600; color: var(--river-deep); }
+
+/* Stand-in until a photo is added: same size and shape as the photos */
+.photo-pending {
+  display: grid; place-items: center; aspect-ratio: 3 / 4; width: 100%;
+  border-radius: var(--radius); background: var(--sage-tint); color: var(--ink-soft);
+  font-family: var(--serif); font-size: 2.6rem; font-weight: 500; letter-spacing: 0.02em;
+}
+.person .photo-pending { margin-bottom: 14px; }
+
+/* Group photo on the team page */
+.team-photo { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); margin-top: 28px; background: var(--sage-tint); }
 
 /* Location */
 .location { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
@@ -223,5 +255,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media (max-width: 520px) {
   .team-grid { grid-template-columns: 1fr; }
-  .bio img { max-width: 240px; }
+  .bio img, .bio .photo-pending { max-width: 240px; }
+  .bio .glance { grid-template-columns: 1fr; gap: 2px 0; }
+  .bio .glance dd { margin-bottom: 10px; }
 }
