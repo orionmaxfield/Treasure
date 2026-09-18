@@ -6,6 +6,8 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
 - `index.html` — home, with the appointment form in the hero
 - `services.html` — what we treat
 - `team.html` — therapist bios
+- `joe-arzola.html`, `jennifer-arzola.html`, `charlene-holloway.html`, `leann-vaterlaus.html`, `katie-aston.html`, `kaisa.html` — one page per clinician (these are the links to put on Psychology Today and social profiles)
+- `sitemap.xml`, `robots.txt` — for search engines; add a new page to the sitemap when you create one
 - `fees.html` — insurance, sliding scale, reduced-rate sessions, Good Faith Estimate line
 - `contact.html` — form, map, crisis resources
 - `privacy.html`
