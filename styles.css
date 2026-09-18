@@ -174,7 +174,12 @@ img { max-width: 100%; height: auto; display: block; }
 .bio .role { color: var(--ink-soft); margin-bottom: 16px; }
 .bio h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; margin: 20px 0 6px; }
 .bio { scroll-margin-top: 96px; }
-.bio .btn { margin-top: 20px; }
+.bio .tagline { font-family: var(--serif); font-size: 1.2rem; line-height: 1.45; color: var(--ink); margin-bottom: 18px; }
+.bio .glance { display: grid; grid-template-columns: max-content 1fr; gap: 8px 18px; margin: 20px 0 0; padding: 18px 20px; background: var(--mist); border-radius: var(--radius); }
+.bio .glance dt { font-weight: 700; font-size: 0.95rem; }
+.bio .glance dd { margin: 0; }
+.bio .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 22px; }
+.bio .actions .ext { font-weight: 600; }
 .team-jump { margin-top: 20px; font-size: 0.95rem; display: flex; flex-wrap: wrap; gap: 6px 14px; }
 .team-jump span { color: var(--ink-soft); }
 .team-jump a { font-weight: 600; }
@@ -249,4 +254,6 @@ a.person:hover h3, a.person:focus-visible h3 { text-decoration: underline; text-
 @media (max-width: 520px) {
   .team-grid { grid-template-columns: 1fr; }
   .bio img, .bio .photo-pending { max-width: 240px; }
+  .bio .glance { grid-template-columns: 1fr; gap: 2px 0; }
+  .bio .glance dd { margin-bottom: 10px; }
 }

@@ -15,6 +15,12 @@ document.querySelectorAll('form[data-contact]').forEach(function (form) {
     var button = form.querySelector('button[type="submit"]');
     var success = form.parentElement.querySelector('.form-success');
     var error = form.querySelector('.form-error');
+    // Put the chosen therapist in the email subject so the inbox can filter or forward it.
+    var who = form.querySelector('select[name="therapist"]');
+    var subject = form.querySelector('input[name="_subject"]');
+    if (who && subject && who.value) {
+      subject.value = 'Appointment request for ' + who.value + ' (website)';
+    }
     button.disabled = true;
     button.textContent = 'Sending…';
     error.classList.remove('show');
