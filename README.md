@@ -13,9 +13,9 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
 
 ## Before launch (three things)
 
-1. **Connect the form.** Right now both forms post to `https://formspree.io/f/YOUR_FORM_ID`, which is a placeholder, so submissions go nowhere and the visitor sees the error message. To fix: create a free form at formspree.io, set the recipient to admin@tvmhtherapy.com (add a second recipient as backup), copy the form ID, and replace `YOUR_FORM_ID` in `index.html` and `contact.html`. Test it once.
-   - Every submission includes the "Who would you like to see?" answer, and `site.js` puts that name in the email subject ("Appointment request for Leann Vaterlaus (website)"). Set up a filter in the admin inbox to forward each subject to that therapist, or forward by hand.
-   - Formspree's free plan sends to one inbox. Sending directly to each therapist needs a paid Formspree plan (routing rules) or a Zapier/Make step. The subject-line filter above does the same job for free.
+1. **The form is connected.** Both forms post to Formspree form `mjykvdzr`. Submissions go to the recipient set in the Formspree dashboard (formspree.io, sign in with the account that created the form). To change who receives them, change it there, not in the HTML.
+   - Every submission includes the "Who would you like to see?" answer, and `site.js` puts that name in the email subject ("Appointment request for Leann Vaterlaus (website)"). Set up a filter in the receiving inbox to forward each subject to that therapist, or forward by hand.
+   - Formspree's free plan sends to one inbox and allows 50 submissions a month. Sending directly to each therapist needs a paid Formspree plan (routing rules) or a Zapier/Make step. The subject-line filter above does the same job for free.
 2. **Add the photos.** Save each headshot into `images/` with exactly these names (JPEG, portrait orientation, roughly 3:4):
    - `images/joe.jpg`, `images/jennifer.jpg`, `images/charlene.jpg`, `images/leann.jpg`, `images/katie.jpg`, `images/kaisa.jpg`
    - `images/team.jpg` for the group photo shown at the top of `team.html` (landscape, roughly 3:2)
