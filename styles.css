@@ -14,7 +14,7 @@
   --white: #ffffff;
   --radius: 10px;
   --max: 1080px;
-  --serif: "Fraunces", Georgia, serif;
+  --serif: "Lora", Georgia, serif;
   --sans: "Figtree", "Segoe UI", system-ui, sans-serif;
 }
 
@@ -104,13 +104,23 @@ img { max-width: 100%; height: auto; display: block; }
   position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto;
   z-index: 0; pointer-events: none;
 }
-.hero .wrap {
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start;
+.hero .wrap { position: relative; z-index: 1; }
+.hero { padding: 88px 0 72px; }
+.hero-bg {
+  position: absolute; inset: -24px; z-index: 0; pointer-events: none;
+  background-image: url(images/hero.jpg), url(images/team.jpg);
+  background-size: cover, 420%; background-position: center, 0% 0%;
+  filter: blur(7px) saturate(1.05); opacity: 0.38;
 }
+.hero-veil {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(246,248,244,0.96) 0%, rgba(246,248,244,0.86) 50%, rgba(246,248,244,0.55) 100%);
+}
+.hero-message { max-width: 640px; }
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .hero h1 { margin-bottom: 0.3em; }
 .hero-sub { font-family: var(--sans); font-size: 1.05rem; font-weight: 600; color: var(--river-deep); letter-spacing: 0.01em; margin-bottom: 18px; }
-.hero .lead { max-width: 48ch; }
+.hero .lead { max-width: 52ch; font-size: 1.22rem; }
 .accepting {
   display: inline-block; background: var(--sage-tint); color: var(--ink);
   padding: 6px 14px; border-radius: 999px; font-size: 0.92rem; font-weight: 600;
@@ -118,6 +128,25 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .hero-meta { margin-top: 28px; font-size: 0.98rem; color: var(--ink-soft); }
 .hero-meta strong { color: var(--ink); }
+
+/* Faint photo behind inner page headers and the closing band */
+.page-head, .cta-band { position: relative; overflow: hidden; }
+.page-head::before, .cta-band::before {
+  content: ""; position: absolute; inset: -24px; z-index: 0; pointer-events: none;
+  background: url(images/team.jpg) 0% 0% / 420%; filter: blur(7px) saturate(1.05);
+}
+.page-head::before { opacity: 0.2; }
+.cta-band::before { opacity: 0.22; }
+.page-head > .wrap, .cta-band > .wrap { position: relative; z-index: 1; }
+
+/* "How to see us" section with the form beside it */
+.reach { padding-top: 48px; }
+.reach-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.reach-item { padding: 18px 0; border-top: 1px solid var(--line); }
+.reach-item:last-child { border-bottom: 1px solid var(--line); }
+.reach-item h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.reach-item p { margin: 0; color: var(--ink-soft); }
+.reach-item strong { color: var(--ink); }
 
 /* Form */
 .form-card {
@@ -157,6 +186,7 @@ img { max-width: 100%; height: auto; display: block; }
 .row p:last-child { margin-bottom: 0; }
 
 /* Tag list for concerns */
+.callout.intern { background: var(--sand); border-left-color: var(--river); margin-top: 8px; }
 .callout { background: var(--sage-tint); border-left: 4px solid var(--sage); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 36px; }
 .prose .tags { margin: 8px 0 18px; padding-left: 0; }
 .tags { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
@@ -168,13 +198,17 @@ img { max-width: 100%; height: auto; display: block; }
 /* Team */
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .person img { aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); margin-bottom: 14px; background: var(--sage-tint); }
-.person h3 { margin-bottom: 2px; }
+.person h3 { margin-bottom: 2px; font-size: 1.15rem; font-weight: 600; }
 .person .role { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 8px; }
 
 .bio { display: grid; grid-template-columns: 280px 1fr; gap: 40px; padding: 48px 0; border-bottom: 1px solid var(--line); }
 .bio:last-child { border-bottom: 0; }
 .bio img { border-radius: var(--radius); aspect-ratio: 3 / 4; object-fit: cover; background: var(--sage-tint); }
+.bio h2 { font-size: 1.9rem; }
+.bio h2 a { color: inherit; text-decoration: none; }
+.bio h2 a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .bio .role { color: var(--ink-soft); margin-bottom: 16px; }
+.bio .actions .phone { font-weight: 600; }
 .bio h3 { font-family: var(--sans); font-size: 1rem; font-weight: 700; margin: 20px 0 6px; }
 .bio { scroll-margin-top: 96px; }
 .bio .tagline { font-family: var(--serif); font-size: 1.2rem; line-height: 1.45; color: var(--ink); margin-bottom: 18px; }
@@ -208,11 +242,12 @@ a.person:hover h3, a.person:focus-visible h3 { text-decoration: underline; text-
 .team-photo { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); margin-top: 28px; background: var(--sage-tint); }
 
 /* Individual therapist pages */
+.crop-top { object-position: 50% 10%; }
 .crumbs { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 20px; }
 .crumbs span { margin: 0 8px; }
 .profile { padding-bottom: 32px; }
 .profile-hero { padding: 0; border-bottom: 0; }
-.profile-hero h1 { margin-bottom: 6px; }
+.profile-hero h1 { margin-bottom: 6px; font-size: clamp(2rem, 4vw, 2.7rem); }
 .profile-body { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
 .profile-side { background: var(--mist); border-radius: var(--radius); padding: 24px; position: sticky; top: 96px; }
 .profile-side h3 { font-family: var(--sans); font-size: 0.95rem; font-weight: 700; margin: 0 0 8px; }
@@ -299,6 +334,8 @@ a.row p { color: var(--ink-soft); }
   .team-grid { grid-template-columns: 1fr; }
   .bio img, .bio .photo-pending { max-width: 240px; }
   .profile-body { grid-template-columns: 1fr; }
+  .reach-grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero { padding: 56px 0 48px; }
   .checks { grid-template-columns: 1fr; }
   .profile-side { position: static; }
   .bio .glance { grid-template-columns: 1fr; gap: 2px 0; }

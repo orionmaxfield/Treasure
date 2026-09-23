@@ -29,6 +29,7 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
    - `images/joe.jpg`, `images/jennifer.jpg`, `images/charlene.jpg`, `images/leann.jpg`, `images/katie.jpg`, `images/kaisa.jpg`
    - `images/team.jpg` for the group photo shown at the top of `team/` (landscape, roughly 3:2)
    - `images/logo.png` for the footer logo, then update the footer `src` on every page
+   - `images/hero.jpg` (optional): a wide photo of Boise, the foothills, or trees. If present it becomes the faint background behind the home page hero; otherwise the group photo is used.
    Until a file is there, `site.js` falls back to the old Wix photo for Joe, Jennifer, and Charlene, shows an initials block for Leann, Katie, and Kaisa, and hides the group photo. Do this before the Wix site is taken down.
 3. **Confirm the roster.** Bios are for Joe, Jennifer, Charlene, Leann, Katie, and the intern Kaisa. Joe, Jennifer, and Charlene were carried over from the current site with photos. All six photos are loaded from `images/` (see step 2). Check Kaisa's name spelling and credentials, and Katie's credential (listed as LMSW), against what the practice uses. Add or remove a person by copying one `<div class="bio">` block in `team/`, one `<a class="person">` block in `index.html`, and one `<option>` in the "Who would you like to see?" select in `index.html` and `contact/`.
 
