@@ -10,7 +10,7 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
 - `index.html` — home, with the appointment form in the hero
 - `services/` — what we treat
 - `team/` — therapist bios
-- `joe-arzola/`, `jennifer-arzola/`, `charlene-holloway/`, `leann-vaterlaus/`, `katie-aston/`, `kaisa/` — one page per clinician (these are the links to put on Psychology Today and social profiles)
+- `joe-arzola/`, `jennifer-arzola/`, `charlene-holloway/`, `leann-vaterlaus/`, `katie-aston/`, `kaisa/`, `cathy-adolph/` — one page per clinician (these are the links to put on Psychology Today and social profiles)
 - `anxiety-therapy-boise/`, `depression-therapy-boise/`, `trauma-therapy-boise/`, `couples-therapy-boise/`, `child-therapy-boise/`, `grief-counseling-boise/`, `anger-management-boise/` — one page per specialty
 - `sitemap.xml`, `robots.txt` — for search engines. Run `python3 build_sitemap.py` after adding or removing a page.
 - `faq/`, `online-therapy-idaho/`, `faith-based-counseling-boise/`, `cbrs-boise/`, `adhd-therapy-boise/`, `reunification-therapy-boise/` — FAQ and additional specialty pages
@@ -31,7 +31,7 @@ Static HTML site, no build step. Hosts on GitHub Pages as-is.
    - `images/logo.png` for the footer logo, then update the footer `src` on every page
    - `images/hero.jpg` (optional): a wide photo of Boise, the foothills, or trees. If present it becomes the faint background behind the home page hero; otherwise the group photo is used.
    Until a file is there, `site.js` falls back to the old Wix photo for Joe, Jennifer, and Charlene, shows an initials block for Leann, Katie, and Kaisa, and hides the group photo. Do this before the Wix site is taken down.
-3. **Confirm the roster.** Bios are for Joe, Jennifer, Charlene, Leann, Katie, and the intern Kaisa. Joe, Jennifer, and Charlene were carried over from the current site with photos. All six photos are loaded from `images/` (see step 2). Check Kaisa's name spelling and credentials, and Katie's credential (listed as LMSW), against what the practice uses. Add or remove a person by copying one `<div class="bio">` block in `team/`, one `<a class="person">` block in `index.html`, and one `<option>` in the "Who would you like to see?" select in `index.html` and `contact/`.
+3. **Confirm the roster.** Bios are for Joe, Jennifer, Charlene, Leann, Katie, counseling intern Kaisa, and CBRS intern Cathy Adolph. Joe, Jennifer, and Charlene were carried over from the current site with photos. All six photos are loaded from `images/` (see step 2). Check Kaisa's name spelling and credentials, and Katie's credential (listed as LMSW), against what the practice uses. Add or remove a person by copying one `<div class="bio">` block in `team/`, one `<a class="person">` block in `index.html`, and one `<option>` in the "Who would you like to see?" select in `index.html` and `contact/`.
 
 ## Domain cutover checklist
 

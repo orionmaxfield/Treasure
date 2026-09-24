@@ -148,6 +148,19 @@ img { max-width: 100%; height: auto; display: block; }
 .reach-item p { margin: 0; color: var(--ink-soft); }
 .reach-item strong { color: var(--ink); }
 
+/* Home page only: bolder imagery */
+body.home .hero-bg { opacity: 0.6; filter: blur(4px) saturate(1.1); background-size: cover, 300%; background-position: center, 0% 0%; }
+body.home .hero-veil { background: linear-gradient(90deg, rgba(246,248,244,0.97) 0%, rgba(246,248,244,0.9) 45%, rgba(246,248,244,0.35) 100%); }
+body.home .cta-band::before { opacity: 0.32; filter: blur(5px) saturate(1.1); }
+.photo-band { position: relative; height: clamp(260px, 38vw, 460px); overflow: hidden; }
+.photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+.photo-band::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(33,59,63,0) 40%, rgba(33,59,63,0.6) 100%); }
+.photo-band-text { position: absolute; left: 0; right: 0; bottom: 28px; z-index: 1; }
+.photo-band-text p { color: #fff; font-family: var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.7rem); margin: 0; text-shadow: 0 1px 8px rgba(0,0,0,0.35); }
+body.home .section.sage { position: relative; overflow: hidden; }
+body.home .section.sage::before { content: ""; position: absolute; inset: -24px; z-index: 0; pointer-events: none; background: url(images/team.jpg) 100% 0% / 420%; filter: blur(8px) saturate(1.05); opacity: 0.16; }
+body.home .section.sage > .wrap { position: relative; z-index: 1; }
+
 /* Form */
 .form-card {
   background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
