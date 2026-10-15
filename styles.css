@@ -71,17 +71,19 @@ img { max-width: 100%; height: auto; display: block; }
   position: sticky; top: 0; z-index: 20;
 }
 .site-header .wrap {
+  max-width: 1200px;
   display: flex; align-items: center; justify-content: space-between;
-  gap: 24px; min-height: 72px;
+  gap: 20px; min-height: 72px;
 }
 .brand {
-  font-family: var(--serif); font-size: 1.25rem; font-weight: 600;
-  color: var(--ink); text-decoration: none; line-height: 1.1;
+  font-family: var(--serif); font-size: clamp(1.5rem, 2.2vw, 1.85rem); font-weight: 600;
+  color: var(--ink); text-decoration: none; line-height: 1.05; letter-spacing: -0.01em;
 }
-.brand span { display: block; font-family: var(--sans); font-weight: 400; font-size: 0.8rem; color: var(--ink-soft); }
+.brand span { display: block; font-family: var(--sans); font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); letter-spacing: 0; margin-top: 3px; }
 .brand { white-space: nowrap; }
-.nav { display: flex; align-items: center; gap: 24px; }
-.nav a { color: var(--ink); text-decoration: none; font-weight: 500; white-space: nowrap; }
+.brand-br { display: none; }
+.nav { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+.nav a { color: var(--ink); text-decoration: none; font-weight: 500; white-space: nowrap; font-size: 0.95rem; }
 .nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--sage); text-underline-offset: 6px; text-decoration-thickness: 2px; }
 .nav-toggle {
   display: none; background: none; border: 1px solid var(--line); border-radius: 8px;
@@ -329,7 +331,11 @@ a.row p { color: var(--ink-soft); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .row { grid-template-columns: 1fr; gap: 6px; }
   .site-footer .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 1160px) {
   .nav-toggle { display: inline-block; }
+  .brand { font-size: 1.6rem; }
+  .nav a { font-size: 1rem; }
   .nav {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
     background: var(--mist); border-bottom: 1px solid var(--line);
@@ -340,6 +346,9 @@ a.row p { color: var(--ink-soft); }
   .nav .btn { margin-top: 12px; text-align: center; border: 0; }
 }
 @media (max-width: 520px) {
+  .brand { font-size: 1.3rem; max-width: calc(100% - 96px); }
+  .brand-br { display: inline; }
+  .brand span { font-size: 0.78rem; }
   .team-grid { grid-template-columns: 1fr; }
   .bio img, .bio .photo-pending { max-width: 240px; }
   .profile-body { grid-template-columns: 1fr; }
