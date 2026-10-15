@@ -9,7 +9,7 @@ Drop the team photos in this folder with these exact filenames. The pages alread
 | `charlene.jpg` | Charlene Holloway | portrait, about 3:4 |
 | `leann.jpg` | Leann Vaterlaus | portrait, about 3:4 |
 | `katie.jpg` | Katie Aston | portrait, about 3:4 |
-| `kaisa.jpg` | Kaisa (CBRS worker) | portrait, about 3:4 |
+| `kaisa.jpg` | Kaisa Nalewajko (CBRS worker) | portrait, about 3:4 |
 | `team.jpg` | Group photo, top of the team page | landscape, about 3:2 |
 | `logo.png` | Footer logo (then update the footer `src` on each page) | wide |
 
