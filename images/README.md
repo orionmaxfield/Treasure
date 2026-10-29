@@ -17,6 +17,6 @@ Drop the team photos in this folder with these exact filenames. The pages alread
 
 ## Photo credits
 
-- `hero.jpg`: not yet added. When it is, record here: photographer, source page URL, and license (for example Unsplash License or Pexels License).
+- `hero.jpg`: derived from the practice's own photography (the foliage at the top of a team headshot, brightened and warmed). Owned by Treasure Valley Mental Health; no outside license applies. Replace with any free-licensed nature photo and record its photographer, source URL, and license here.
 
 Keep each headshot under about 300 KB. Photos are cropped to shape by CSS, so a little extra background is fine.
