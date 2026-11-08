@@ -157,8 +157,10 @@ body.home .hero { padding: 104px 0 88px; }
 .reach-item strong { color: var(--ink); }
 
 /* Home page only: bolder imagery */
-body.home .hero-bg { opacity: 1; filter: saturate(1.1); }
-body.home .hero-veil { background: linear-gradient(90deg, rgba(246,248,244,0.95) 0%, rgba(246,248,244,0.86) 44%, rgba(246,248,244,0.1) 100%); }
+body.home .hero-bg { opacity: 1; filter: none; object-position: center 40%; }
+/* Light veil only, so the photo stays colorful; the text sits on its own soft panel */
+body.home .hero-veil { background: linear-gradient(90deg, rgba(246,248,244,0.35) 0%, rgba(246,248,244,0.12) 50%, rgba(246,248,244,0) 100%); }
+body.home .hero-message { background: rgba(246,248,244,0.88); padding: 32px 36px; border-radius: var(--radius); box-shadow: 0 12px 32px rgba(33, 59, 63, 0.18); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
 body.home .cta-band::before { opacity: 0.4; filter: saturate(1.1); }
 body.home .section.sage { position: relative; overflow: hidden; }
 body.home .section.sage::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: url(images/forest.jpg) center / cover; opacity: 0.22; }
@@ -338,7 +340,7 @@ a.row p { color: var(--ink-soft); }
   .site-footer .wrap { grid-template-columns: 1fr; }
 }
 @media (max-width: 1160px) {
-  body.home .hero-veil { background: linear-gradient(90deg, rgba(246,248,244,0.95) 0%, rgba(246,248,244,0.88) 62%, rgba(246,248,244,0.25) 100%); }
+  body.home .hero-veil { background: linear-gradient(90deg, rgba(246,248,244,0.4) 0%, rgba(246,248,244,0.15) 62%, rgba(246,248,244,0) 100%); }
   body.home .nav-toggle { display: none; }
   body.home .nav { display: flex; position: static; background: transparent; border: 0; flex-direction: row; align-items: center; gap: 18px; padding: 0; }
   body.home .nav a { padding: 0; border: 0; }
@@ -365,7 +367,8 @@ a.row p { color: var(--ink-soft); }
   body.home .site-header .wrap { gap: 10px; padding-top: 18px; padding-bottom: 14px; }
   body.home .brand { font-size: 2.2rem; white-space: normal; }
   body.home .brand-logo { width: min(100%, 300px); margin-bottom: 10px; }
-  body.home .hero-veil { background: linear-gradient(180deg, rgba(246,248,244,0.92) 0%, rgba(246,248,244,0.82) 70%, rgba(246,248,244,0.5) 100%); }
+  body.home .hero-veil { background: rgba(246,248,244,0.2); }
+  body.home .hero-message { padding: 24px 22px; }
 }
 @media (max-width: 520px) {
   .brand { font-size: 1.3rem; max-width: calc(100% - 96px); }
