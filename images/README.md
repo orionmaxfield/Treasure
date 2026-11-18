@@ -11,7 +11,7 @@ Drop the team photos in this folder with these exact filenames. The pages alread
 | `katie.jpg` | Katie Aston | portrait, about 3:4 |
 | `kaisa.jpg` | Kaisa Nalewajko (CBRS worker) | portrait, about 3:4 |
 | `team.jpg` | Group photo, top of the team page | landscape, about 3:2 |
-| `logo.png` | Footer logo (then update the footer `src` on each page) | wide |
+| `logo.png` | Logo with the tree and the practice name. Used in the home page header and every footer. Current file is the practice's own logo from their Wix site (963x186, transparent). Replace it with a sharper file of the same shape to update both places | wide |
 | `hero-color.jpg` | Home page hero photo (bright, colorful Idaho nature) | wide, about 2:1, under 400 KB |
 | `hero.jpg` | Older hero photo, no longer used on the home page | wide |
 | `forest.jpg` | Soft foliage background behind inner page headers and the closing band; made from the top of a team headshot, so no outside license applies | wide |

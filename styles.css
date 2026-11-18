@@ -82,11 +82,11 @@ img { max-width: 100%; height: auto; display: block; }
 .brand span { display: block; font-family: var(--sans); font-weight: 400; font-size: 0.85rem; color: var(--ink-soft); letter-spacing: 0; margin-top: 3px; }
 .brand { white-space: nowrap; }
 .brand-br { display: none; }
-/* Home page: centered logo and practice name, header scrolls with the page (not sticky) */
+/* Home page: centered logo (the logo image already includes the practice name, so the name is not repeated as text), header scrolls with the page (not sticky) */
 body.home .site-header { position: relative; top: auto; }
 body.home .site-header .wrap { flex-direction: column; align-items: center; gap: 14px; padding-top: 22px; padding-bottom: 18px; }
 body.home .brand { font-size: clamp(2.3rem, 4.2vw, 3.4rem); text-align: center; }
-body.home .brand-logo { width: min(100%, clamp(240px, 36vw, 400px)); height: auto; margin: 0 auto 12px; }
+body.home .brand-logo { width: clamp(320px, 52vw, 640px); height: auto; margin: 0 auto 8px; }
 body.home .brand span { font-size: 1.05rem; margin-top: 6px; }
 body.home .nav { justify-content: center; flex-wrap: wrap; }
 .nav { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
@@ -366,14 +366,14 @@ a.row p { color: var(--ink-soft); }
   body.home .nav .btn { margin-top: 12px; text-align: center; border: 0; }
   body.home .site-header .wrap { gap: 10px; padding-top: 18px; padding-bottom: 14px; }
   body.home .brand { font-size: 2.2rem; white-space: normal; }
-  body.home .brand-logo { width: min(100%, 300px); margin-bottom: 10px; }
+  body.home .brand-logo { width: 440px; margin-bottom: 6px; }
   body.home .hero-veil { background: rgba(246,248,244,0.2); }
   body.home .hero-message { padding: 24px 22px; }
 }
 @media (max-width: 520px) {
   .brand { font-size: 1.3rem; max-width: calc(100% - 96px); }
   body.home .brand { font-size: 1.9rem; max-width: none; }
-  body.home .brand-logo { width: min(100%, 240px); margin-bottom: 8px; }
+  body.home .brand-logo { width: 340px; margin-bottom: 4px; }
   .brand-br { display: inline; }
   .brand span { font-size: 0.78rem; }
   .team-grid { grid-template-columns: 1fr; }
